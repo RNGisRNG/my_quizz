@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" lang="fr">
+    <title>{% block title %}My Quizz{% endblock %}</title>
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+
+<body>
+{% if connected %}
+    {% include('./header/headerConnected.html.twig') %}
+{% else %}
+    {% include('./header/headerAnonyme.html.twig') %}
+{% endif %}
+{% block body %}{% endblock %}
+</body>
+</html>
